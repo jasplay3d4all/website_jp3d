@@ -1,0 +1,8 @@
+node_modules
+.env
+config
+'*__pycache__*/*'
+'*.DS_Store*'
+storage/data_io/**\*
+test/sio_gpu_srvr/share_vol/data_io/**\*
+.git/**\*
