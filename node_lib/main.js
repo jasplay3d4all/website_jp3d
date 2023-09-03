@@ -2,7 +2,7 @@
 const fs = require('fs')
 const fsPromises = require('fs').promises
 // const fsExists = require('fs.promises.exists')
-bot_sys_cfg = "./node_lib/.env"
+bot_sys_cfg = "./node_lib/dotenv.txt"
 const config = fs.existsSync(bot_sys_cfg) ? require('dotenv').config({ path:bot_sys_cfg}).parsed : require('dotenv').config().parsed
 
 if (!config||!config.gpu_server_url||!config.gpu_data_io_path||!config.bot_data_io_path||!config.gpu_data_io_url_path||

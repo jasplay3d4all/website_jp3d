@@ -154,7 +154,7 @@ module.exports = function (utils, bot) {
         var channelid = pipe_state.user_state.info.channelid;
         var cur_stage_idx = pipe_state.cur_stage_idx; // IMPORTANT: Store the cur_stage_idx before it gets updated 
         var gpu_state = pipe_state.stage_state[pipe_state, cur_stage_idx].gpu_state
-        var new_msg = create_op_ui(pipe_state, cur_stage_idx, disabled=false, gpu_state["output"])
+        var new_msg = create_op_ui(pipe_state, cur_stage_idx, disabled=false, gpu_state["tmpfile_output"])
         bot.createMessage(channelid, new_msg);
     }
 
