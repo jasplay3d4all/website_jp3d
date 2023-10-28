@@ -29,7 +29,7 @@ module.exports = function () {
                    op_fld:{val : "./img/", show: false, type:"path"},
             },
             gpu_state:{ 
-              function: "gen_img", // Name of the function to call
+              function: "gen_one_img", // Name of the function to call
               stage_status:"in_queue", // "pre_stage" "in_queue", "gpu_triggered", "error", "complete"
               stage_progress: 0, // Percentage of task completion
               output:['https://tmpfiles.org/1900371/generated123.mp4',

@@ -15,10 +15,10 @@ module.exports = function () {
         },
         stage_state:[{
             // Stage 0: Generate the image
-            // gen_img(theme, prompt, op_fld, control_type=None, ctrl_img=None, n_prompt="", height=512, width=512, 
+            // gen_one_img(theme, prompt, op_fld, control_type=None, ctrl_img=None, n_prompt="", height=512, width=512, 
             // seed=-1, num_images=1, safety_checker=None, collect_cache=True):
             config:{ 
-                theme:{val : "people", label: "Theme", show: true, type:"default"},
+                theme:{val : "sdxl_base", label: "Theme", show: true, type:"default"},
                 prompt:{val : "RAW photo, a photograph perfect well-lit (closeup:1.15) (medium shot portrait:0.6) photograph of a handsome Indian man with charming smile standing\
                             white shirt, pleasent background, looking at me, slight smile,8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3",
                         label: "Prompt", show: true, type:"default"},
@@ -29,7 +29,7 @@ module.exports = function () {
                 op_fld:{val : "./img", show: false, type:"path"}
             },
             gpu_state:{ 
-                function: "gen_img", // Name of the function to call
+                function: "gen_one_img", // Name of the function to call
                 stage_status:"in_queue", // "pre_stage" "in_queue", "gpu_triggered", "error", "complete"
                 stage_progress: 0, // Percentage of task completion
             }},{
